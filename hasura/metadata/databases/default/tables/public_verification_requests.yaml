@@ -1,0 +1,14 @@
+table:
+  name: verification_requests
+  schema: public
+event_triggers:
+- definition:
+    enable_manual: false
+    insert:
+      columns: "*"
+  name: test_trigger
+  retry_conf:
+    interval_sec: 10
+    num_retries: 0
+    timeout_sec: 60
+  webhook: "{{HASURA_GRAPHQL_API_BASE_ENDPOINT}}/api/events"

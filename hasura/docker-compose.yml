@@ -1,0 +1,25 @@
+version: '3.6'
+
+services:
+  postgres:
+    container_name: hasura_fullstack_postgres
+    image: postgres:12
+    ports:
+      - '5432:5432'
+    restart: always
+    volumes:
+      - ./db_data:/var/lib/postgresql/data
+    env_file: ./.env
+
+  hasura:
+    container_name: hasura_fullstack_hasura
+    image: hasura/graphql-engine:v2.0.0-alpha.6
+    ports:
+      - '8080:8080'
+    depends_on:
+      - 'postgres'
+    restart: always
+    env_file: ./.env
+
+volumes:
+  db_data:

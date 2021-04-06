@@ -1,0 +1,37 @@
+{
+  "name": "hasura-nextjs-fullstack-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "codegen": "graphql-codegen --config codegen.yml --require dotenv/config --watch",
+    "type-check": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^15.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "next": "^10.0.7",
+    "next-auth": "^3.10.1",
+    "next-connect": "^0.10.0",
+    "pg": "^8.5.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "urql": "^2.0.2"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.21.3",
+    "@graphql-codegen/typescript": "^1.21.1",
+    "@graphql-codegen/typescript-operations": "^1.17.15",
+    "@graphql-codegen/typescript-urql": "^2.0.5",
+    "@types/jsonwebtoken": "^8.5.1",
+    "@types/next-auth": "^3.13.0",
+    "@types/node": "^14.14.31",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "typescript": "^4.2.2"
+  }
+}
